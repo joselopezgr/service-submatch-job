@@ -6,7 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/job/{id}")
+@RequestMapping("/jobs/{id}")
 public class DeleteUserController {
     private final JobService jobService;
 

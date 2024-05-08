@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/job/{id}")
+@RequestMapping("/jobs/{id}")
 public class UpdateJobController extends AbstractJobController {
 
     final JobService jobService;
