@@ -1,6 +1,5 @@
-package com.jlg.submatch.service.user.exception;
+package com.jlg.submatch.service.job.exception;
 
-import com.jlg.submatch.service.job.exception.JobException;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;

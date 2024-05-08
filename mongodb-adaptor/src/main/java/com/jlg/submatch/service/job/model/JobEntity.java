@@ -1,4 +1,4 @@
-package com.jlg.submatch.service.user.model;
+package com.jlg.submatch.service.job.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

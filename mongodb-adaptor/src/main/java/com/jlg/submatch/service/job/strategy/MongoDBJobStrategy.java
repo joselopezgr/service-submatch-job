@@ -1,11 +1,10 @@
-package com.jlg.submatch.service.user.strategy;
+package com.jlg.submatch.service.job.strategy;
 
 import com.jlg.submatch.service.job.handler.CreateJobHandler;
 import com.jlg.submatch.service.job.handler.DeleteJobHandler;
 import com.jlg.submatch.service.job.handler.ReadJobHandler;
 import com.jlg.submatch.service.job.handler.UpdateJobHandler;
 import com.jlg.submatch.service.job.model.Job;
-import com.jlg.submatch.service.job.strategy.JobStrategy;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import org.springframework.stereotype.Component;
 

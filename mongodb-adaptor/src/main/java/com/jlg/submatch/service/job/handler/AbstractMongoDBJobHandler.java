@@ -1,9 +1,9 @@
-package com.jlg.submatch.service.user.handler;
+package com.jlg.submatch.service.job.handler;
 
 import com.jlg.submatch.service.job.model.Job;
-import com.jlg.submatch.service.user.model.JobEntity;
+import com.jlg.submatch.service.job.model.JobEntity;
 
-abstract class AbstractMongoDBUserHandler {
+abstract class AbstractMongoDBJobHandler {
 
     JobEntity toDBEntity(Job job){
         return new JobEntity(

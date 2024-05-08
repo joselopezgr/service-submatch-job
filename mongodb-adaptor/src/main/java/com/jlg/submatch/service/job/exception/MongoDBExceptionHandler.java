@@ -1,4 +1,4 @@
-package com.jlg.submatch.service.user.exception;
+package com.jlg.submatch.service.job.exception;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

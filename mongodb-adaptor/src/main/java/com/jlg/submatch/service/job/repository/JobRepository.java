@@ -1,7 +1,7 @@
-package com.jlg.submatch.service.user.repository;
+package com.jlg.submatch.service.job.repository;
 
-import com.jlg.submatch.service.user.customRepository.CustomJobRepository;
-import com.jlg.submatch.service.user.model.JobEntity;
+import com.jlg.submatch.service.job.customRepository.CustomJobRepository;
+import com.jlg.submatch.service.job.model.JobEntity;
 import org.bson.types.ObjectId;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;

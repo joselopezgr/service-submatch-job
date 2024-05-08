@@ -6,7 +6,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.4"
 }
 
-group = "com.jlg.submatch.service.user"
+group = "com.jlg.submatch.service.job"
 version = "unspecified"
 
 java {
