@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/service-submatch-job.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/service-submatch-job.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/host/service-submatch-job.host.main.iml" filepath="$PROJECT_DIR$/.idea/modules/host/service-submatch-job.host.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mongodb-adaptor/service-submatch-job.mongodb-adaptor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mongodb-adaptor/service-submatch-job.mongodb-adaptor.main.iml" />
+    </modules>
+  </component>
+</project>
