@@ -4,6 +4,8 @@ import com.jlg.submatch.service.job.dto.JobRequestDTO;
 import com.jlg.submatch.service.job.dto.JobResponseDTO;
 import com.jlg.submatch.service.job.model.Job;
 
+import java.util.List;
+
 abstract class AbstractJobController {
 
     Job convertToDomainEntity(JobRequestDTO jobRequestDTO) {
@@ -28,5 +30,11 @@ abstract class AbstractJobController {
                 .salary(job.getSalary())
                 .company(job.getCompany())
                 .build();
+    }
+
+    List<JobResponseDTO> convertToResponseDTOList(List<Job> jobs) {
+        return jobs.stream()
+                .map(this::convertToResponseDTO)
+                .toList();
     }
 }

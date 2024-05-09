@@ -39,6 +39,17 @@ public abstract class AbstractJobService implements JobService {
     }
 
     @Override
+    public List<Job> findAll() {
+        var handler = strategies.stream()
+                .map(JobStrategy::readJobHandler)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .findFirst()
+                .orElseThrow(() -> new JobException("Handler not found"));
+        return handler.findAll().orElseThrow(() -> new JobException("Jobs not found"));
+    }
+
+    @Override
     public Job update(Job job) {
         var handler = strategies.stream()
                 .map(JobStrategy::updateJobHandler)

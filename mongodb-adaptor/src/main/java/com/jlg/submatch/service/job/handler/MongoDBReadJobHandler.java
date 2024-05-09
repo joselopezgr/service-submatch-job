@@ -5,6 +5,7 @@ import com.jlg.submatch.service.job.repository.JobRepository;
 import org.bson.types.ObjectId;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -21,5 +22,11 @@ public class MongoDBReadJobHandler extends AbstractMongoDBJobHandler implements 
         var objectId = new ObjectId(id);
         var entity = jobRepository.findByIdAndDeletedAtIsNull(objectId);
         return entity.map(this::toDomainEntity);
+    }
+
+    @Override
+    public Optional<List<Job>> findAll() {
+        var entities = jobRepository.findAll();
+        return Optional.of(entities).map(this::toDomainEntityList);
     }
 }

@@ -3,6 +3,8 @@ package com.jlg.submatch.service.job.handler;
 import com.jlg.submatch.service.job.model.Job;
 import com.jlg.submatch.service.job.model.JobEntity;
 
+import java.util.List;
+
 abstract class AbstractMongoDBJobHandler {
 
     JobEntity toDBEntity(Job job){
@@ -28,5 +30,11 @@ abstract class AbstractMongoDBJobHandler {
                 .status(jobEntity.getStatus())
                 .postedBy(jobEntity.getPostedBy())
                 .build();
+    }
+
+    List<Job> toDomainEntityList(List<JobEntity> jobEntities){
+        return jobEntities.stream()
+                .map(this::toDomainEntity)
+                .toList();
     }
 }

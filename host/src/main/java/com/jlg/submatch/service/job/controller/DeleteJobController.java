@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/jobs/{id}")
-public class DeleteUserController {
+public class DeleteJobController {
     private final JobService jobService;
 
-    public DeleteUserController(JobService jobService) {
+    public DeleteJobController(JobService jobService) {
         this.jobService = jobService;
     }
 
