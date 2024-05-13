@@ -28,4 +28,7 @@ public class JobRequestDTO {
 
     @NotNull()
     private String postedBy;
+
+    @NotNull()
+    private String contactEmail;
 }

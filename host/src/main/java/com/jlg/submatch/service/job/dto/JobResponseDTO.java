@@ -24,4 +24,7 @@ public class JobResponseDTO {
 
     @NotNull()
     private String company;
+
+    @NotNull()
+    private String contactEmail;
 }

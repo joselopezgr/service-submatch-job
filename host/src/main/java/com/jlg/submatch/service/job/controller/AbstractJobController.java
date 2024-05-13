@@ -17,6 +17,7 @@ abstract class AbstractJobController {
                 .company(jobRequestDTO.getCompany())
                 .status(jobRequestDTO.getStatus())
                 .postedBy(jobRequestDTO.getPostedBy())
+                .contactEmail(jobRequestDTO.getContactEmail())
                 .build();
     }
 
@@ -29,6 +30,7 @@ abstract class AbstractJobController {
                 .location(job.getLocation())
                 .salary(job.getSalary())
                 .company(job.getCompany())
+                .contactEmail(job.getContactEmail())
                 .build();
     }
 

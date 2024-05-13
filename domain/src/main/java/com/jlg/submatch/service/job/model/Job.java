@@ -30,5 +30,9 @@ public class Job {
 
     @NonNull
     private String postedBy;
+
+    @NonNull
+    private String contactEmail;
+
 }
 

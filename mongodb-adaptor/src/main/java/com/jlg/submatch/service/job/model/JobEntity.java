@@ -29,6 +29,8 @@ public class JobEntity {
 
     private final String postedBy;
 
+    private final String contactEmail;
+
     private LocalDateTime deletedAt;
 
     @CreatedDate

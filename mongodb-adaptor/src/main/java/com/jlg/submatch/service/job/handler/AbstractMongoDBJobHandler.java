@@ -15,7 +15,8 @@ abstract class AbstractMongoDBJobHandler {
                 job.getSalary(),
                 job.getCompany(),
                 job.getStatus(),
-                job.getPostedBy()
+                job.getPostedBy(),
+                job.getContactEmail()
         );
     }
 
@@ -29,6 +30,7 @@ abstract class AbstractMongoDBJobHandler {
                 .company(jobEntity.getCompany())
                 .status(jobEntity.getStatus())
                 .postedBy(jobEntity.getPostedBy())
+                .contactEmail(jobEntity.getContactEmail())
                 .build();
     }
 

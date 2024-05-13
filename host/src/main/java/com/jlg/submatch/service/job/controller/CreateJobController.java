@@ -24,9 +24,7 @@ public class CreateJobController extends AbstractJobController {
     @ResponseStatus(HttpStatus.CREATED)
     public JobResponseDTO create(@RequestBody @Valid JobRequestDTO requestBody) {
         Job job = this.convertToDomainEntity(requestBody);
-        System.out.println("Job: " + job);
         var service = jobService.create(job);
-        System.out.println("Service: " + service);
 
         return this.convertToResponseDTO(service);
     }
