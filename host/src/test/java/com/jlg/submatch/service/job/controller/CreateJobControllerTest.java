@@ -1,7 +1,7 @@
 //package com.jlg.submatch.service.job.controller;
 //
 //import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.jlg.submatch.service.job.dto.JobRequestDTO;
+//import com.jlg.submatch.service.job.helpers.JobRequestDTO;
 //import com.jlg.submatch.service.job.model.Job;
 //import com.jlg.submatch.service.job.service.JobService;
 //import org.junit.jupiter.api.*;
