@@ -2,6 +2,7 @@ package com.jlg.submatch.service.job.repository;
 
 import com.jlg.submatch.service.job.customRepository.CustomJobRepository;
 import com.jlg.submatch.service.job.model.JobEntity;
+import com.jlg.submatch.service.job.model.helpers.SearchJobQuery;
 import org.bson.types.ObjectId;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;

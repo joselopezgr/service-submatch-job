@@ -2,6 +2,7 @@ package com.jlg.submatch.service.job.service.impl;
 
 import com.jlg.submatch.service.job.exception.JobException;
 import com.jlg.submatch.service.job.model.Job;
+import com.jlg.submatch.service.job.model.helpers.SearchJobQuery;
 import com.jlg.submatch.service.job.service.JobService;
 import com.jlg.submatch.service.job.strategy.JobStrategy;
 
@@ -69,5 +70,16 @@ public abstract class AbstractJobService implements JobService {
                 .findFirst()
                 .orElseThrow(() -> new JobException("Handler not found"));
         return handler.delete(id).orElseThrow(() -> new JobException("Job not found"));
+    }
+
+    @Override
+    public List<Job> search(SearchJobQuery query) {
+        var handler = strategies.stream()
+                .map(JobStrategy::searchJobHandler)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .findFirst()
+                .orElseThrow(() -> new JobException("Handler not found"));
+        return handler.search(query);
     }
 }
