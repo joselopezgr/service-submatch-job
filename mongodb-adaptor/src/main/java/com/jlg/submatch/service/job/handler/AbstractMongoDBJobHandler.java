@@ -13,9 +13,8 @@ abstract class AbstractMongoDBJobHandler {
                 job.getDescription(),
                 job.getLocation(),
                 job.getSalary(),
-                job.getCompany(),
+                job.getOrganisationId(),
                 job.getStatus(),
-                job.getPostedBy(),
                 job.getContactEmail()
         );
     }
@@ -27,9 +26,8 @@ abstract class AbstractMongoDBJobHandler {
                 .description(jobEntity.getDescription())
                 .location(jobEntity.getLocation())
                 .salary(jobEntity.getSalary())
-                .company(jobEntity.getCompany())
+                .organisationId(jobEntity.getOrganisationId())
                 .status(jobEntity.getStatus())
-                .postedBy(jobEntity.getPostedBy())
                 .contactEmail(jobEntity.getContactEmail())
                 .build();
     }

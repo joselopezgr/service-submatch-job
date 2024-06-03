@@ -27,11 +27,13 @@ dependencyManagement {
 
 dependencies {
     implementation(project(":domain"))
+    implementation(project(":websocket"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-websocket")
+    implementation("org.springframework.boot:spring-boot-starter-mail:3.3.0")
     implementation("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.4.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation((testFixtures(project(":domain"))))
     compileOnly("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.3")

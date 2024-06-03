@@ -1,8 +1,11 @@
 package com.jlg.submatch.service.job.dto;
 
+import com.jlg.submatch.service.job.model.JobStatus;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
@@ -21,10 +24,10 @@ public class JobRequestDTO {
     private String salary;
 
     @NotNull()
-    private String company;
+    private UUID organisationId;
 
     @NotNull()
-    private String status;
+    private JobStatus status;
 
     @NotNull()
     private String postedBy;
