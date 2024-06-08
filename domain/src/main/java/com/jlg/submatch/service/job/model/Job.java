@@ -4,8 +4,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -25,7 +23,7 @@ public class Job {
     private String location;
 
     @NonNull
-    private String salary;
+    private Integer salary;
 
     @NonNull
     private String organisationName;

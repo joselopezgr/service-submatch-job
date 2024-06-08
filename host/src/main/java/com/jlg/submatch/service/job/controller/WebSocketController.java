@@ -8,10 +8,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,7 +16,7 @@ import java.util.UUID;
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/jobs")
-public class ApplicationJobController {
+public class WebSocketController {
 
     private final SimpMessagingTemplate template;
 
@@ -27,7 +24,7 @@ public class ApplicationJobController {
 
     private final SendEmail sendEmail;
 
-    public ApplicationJobController(SimpMessagingTemplate template, List<Job> job, SendEmail sendEmail) {
+    public WebSocketController(SimpMessagingTemplate template, List<Job> job, SendEmail sendEmail) {
         this.template = template;
         this.jobs = job;
         this.sendEmail = sendEmail;
@@ -52,7 +49,7 @@ public class ApplicationJobController {
     }
 
     @PostMapping("/apply")
-    public String applyJob(@RequestParam UUID jobId, @RequestBody Applicant applicantId) {
+    public synchronized String applyJob(@RequestParam UUID jobId, @RequestBody Applicant applicantId) {
         Job job = jobs.stream().filter(j -> j.getId().equals(jobId))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Job not found"));
@@ -87,6 +84,7 @@ public class ApplicationJobController {
 
     @MessageMapping("/delete")
     public void deleteJob(@RequestBody String jobId) {
+        System.out.println("The method is called!!");
         UUID jobIdUUID = UUID.fromString(jobId);
         Job job = jobs.stream().filter(j -> j.getId().equals(jobIdUUID))
                 .findFirst()

@@ -22,7 +22,7 @@ public class JobResponseDTO {
     private String location;
 
     @NotNull()
-    private String salary;
+    private Integer salary;
 
     @NotNull()
     private UUID organisationId;

@@ -22,7 +22,7 @@ public class JobEntity {
 
     private final String location;
 
-    private final String salary;
+    private final Integer salary;
 
     private final UUID organisationId;
 
