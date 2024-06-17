@@ -84,7 +84,6 @@ public class WebSocketController {
 
     @MessageMapping("/delete")
     public void deleteJob(@RequestBody String jobId) {
-        System.out.println("The method is called!!");
         UUID jobIdUUID = UUID.fromString(jobId);
         Job job = jobs.stream().filter(j -> j.getId().equals(jobIdUUID))
                 .findFirst()
@@ -92,7 +91,6 @@ public class WebSocketController {
 
         jobs.remove(job);
         job.setIsDeleted(true);
-        System.out.println("Job deleted: " + job);
         template.convertAndSend("/topic/jobs", job);
     }
 
