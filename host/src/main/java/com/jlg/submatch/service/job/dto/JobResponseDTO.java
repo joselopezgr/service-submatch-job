@@ -4,11 +4,13 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
 @Builder
 public class JobResponseDTO {
     @NotNull()
-    private String id;
+    private UUID id;
 
     @NotNull()
     private String title;
@@ -20,10 +22,10 @@ public class JobResponseDTO {
     private String location;
 
     @NotNull()
-    private String salary;
+    private Integer salary;
 
     @NotNull()
-    private String company;
+    private UUID organisationId;
 
     @NotNull()
     private String contactEmail;

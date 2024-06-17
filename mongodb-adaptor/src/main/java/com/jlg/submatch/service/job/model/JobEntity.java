@@ -8,12 +8,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 @Document(collection = "jobs")
 public class JobEntity {
     @Id
-    private String id;
+    private UUID id;
 
     private final String title;
 
@@ -21,13 +22,11 @@ public class JobEntity {
 
     private final String location;
 
-    private final String salary;
+    private final Integer salary;
 
-    private final String company;
+    private final UUID organisationId;
 
-    private final String status;
-
-    private final String postedBy;
+    private final JobStatus status;
 
     private final String contactEmail;
 

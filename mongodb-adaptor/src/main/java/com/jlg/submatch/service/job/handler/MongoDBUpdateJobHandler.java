@@ -21,7 +21,7 @@ public class MongoDBUpdateJobHandler extends AbstractMongoDBJobHandler implement
     @Override
     @MongoDBExceptionHandler(message = "User update failed")
     public Optional<Job> update(Job updatedUser) {
-        var objectId = new ObjectId(updatedUser.getId());
+        var objectId = new ObjectId(String.valueOf(updatedUser.getId()));
         Optional<JobEntity> dbEntity = this.jobRepository.findById(objectId);
         if(dbEntity.isEmpty()) {
             return Optional.empty();

@@ -14,9 +14,8 @@ abstract class AbstractJobController {
                 .description(jobRequestDTO.getDescription())
                 .location(jobRequestDTO.getLocation())
                 .salary(jobRequestDTO.getSalary())
-                .company(jobRequestDTO.getCompany())
+                .organisationId(jobRequestDTO.getOrganisationId())
                 .status(jobRequestDTO.getStatus())
-                .postedBy(jobRequestDTO.getPostedBy())
                 .contactEmail(jobRequestDTO.getContactEmail())
                 .build();
     }
@@ -29,7 +28,7 @@ abstract class AbstractJobController {
                 .description(job.getDescription())
                 .location(job.getLocation())
                 .salary(job.getSalary())
-                .company(job.getCompany())
+                .organisationId(job.getOrganisationId())
                 .contactEmail(job.getContactEmail())
                 .build();
     }

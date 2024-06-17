@@ -4,11 +4,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
+import java.util.List;
+import java.util.UUID;
+
 @Builder
 @Data
 public class Job {
-    @Builder.Default
-    private String id = null;
+    @Builder.Default()
+    private UUID id = null;
 
     @NonNull
     private String title;
@@ -20,19 +23,30 @@ public class Job {
     private String location;
 
     @NonNull
-    private String salary;
+    private Integer salary;
 
     @NonNull
-    private String company;
+    private String organisationName;
 
     @NonNull
-    private String status;
+    private UUID organisationId;
 
     @NonNull
-    private String postedBy;
+    private String startDate;
+
+    @NonNull
+    private String endDate;
+
+    @NonNull
+    private JobStatus status;
+
+    private String acceptedApplicantId;
 
     @NonNull
     private String contactEmail;
 
+    private List<String> applicantsIds;
+
+    private Boolean isDeleted;
 }
 
